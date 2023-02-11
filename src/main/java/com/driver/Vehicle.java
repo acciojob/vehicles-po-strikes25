@@ -14,10 +14,6 @@ public class Vehicle {
         this.name = name;
     }
 
-    public int getCurrentDirection() {
-        return currentDirection;
-    }
-
     public int getCurrentSpeed() {
         return currentSpeed;
     }
@@ -26,11 +22,17 @@ public class Vehicle {
         this.currentSpeed = currentSpeed;
     }
 
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
+
     public void setCurrentDirection(int currentDirection) {
         this.currentDirection = currentDirection;
     }
 
     public Vehicle(String name) {
+        // Had to Initialize name as well :
+        this.name = name;
         this.currentSpeed = 0;
         this.currentDirection = 0;
     }

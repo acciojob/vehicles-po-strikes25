@@ -4,6 +4,7 @@ public class Boat implements WaterVehicle {
     private String name;
     private int capacity;
 
+    // Had to create a constructor :
     public Boat(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
