@@ -5,6 +5,9 @@ public class Car extends Vehicle {
     private String type;
     private int doors;
     private int gears;
+    private boolean isManual;
+    private int currentGear;
+    private int seats;
 
     public int getWheels() {
         return wheels;
@@ -62,10 +65,6 @@ public class Car extends Vehicle {
         this.seats = seats;
     }
 
-    private boolean isManual;
-    private int currentGear;
-    private int seats;
-
     public Car(String name, int wheels, int doors, int gears, boolean isManual, String type, int seats) {
         //Hint: Car extends Vehicle
         // Accessing the variable 'name' of parent class Vehicle :
@@ -73,13 +72,14 @@ public class Car extends Vehicle {
         this.wheels = wheels;
         this.doors = doors;
         this.gears = gears;
-        this.isManual = false;
+        // Do not initialize as false, should be isManual i.e., the parameter value given to the function :
+        this.isManual = isManual;
         this.type = type;
         this.currentGear = 1;
     }
 
     public void changeGear(int newGear){
-        currentGear = newGear;
+        this.currentGear = newGear;
         System.out.println("changeGear method called - The gear is changed to: " + currentGear);
     }
 
